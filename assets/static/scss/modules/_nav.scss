@@ -1,0 +1,37 @@
+#main-navigator {
+    @include media(750px, 852px) {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+    }
+
+    li {
+        flex-basis: 106px;
+        padding: 7px 0;
+
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    a {
+        font-size: 18px;
+        color: $white;
+        
+        @include media-tablet-devices() {
+            font-size: 14px;
+        }
+    }
+}
+
+#close-menu {
+    display: none;
+}
+
+#main-navigator {
+    &.active #close-menu {
+        display: inline-block;
+    }
+}

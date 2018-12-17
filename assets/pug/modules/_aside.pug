@@ -1,0 +1,72 @@
+aside#aside
+  //- begin info section
+  section.info
+    
+    //- begin info bar
+    h3.title-info.title-aside Интересное 
+    //- end info bar
+
+    //- bagin infobar
+    nav.nav-info
+      ul
+        li(style="background-color: #ec098d")
+          button(type="button", data-info, data-target="#fashion").
+            Мода
+        li(style="background-color: #f78f1d").active
+          button(type="button", data-info, data-target="#films").
+            Кино
+        li(style="background-color: #00aedb")
+          button(type="button", data-info, data-target="#tv").
+            Tv
+    //- end infobar
+
+    //- begin infobar fashion
+    ul.info-list#fashion
+      each obj in fashion 
+        li.info-item
+          .pic
+            img(src= obj.src, alt= obj.alt)
+          .content
+            h4.title-item= obj.title
+            p= obj.content
+    //- end infobar fashion
+
+    //- begin infobar films
+    ul.info-list.active#films
+      each obj in films 
+        li.info-item
+          .pic
+            img(src= obj.src, alt= obj.alt)
+          .content
+            h4.title-item= obj.title
+            p= obj.content
+    //- end infobar films
+
+    //- begin infobar tv
+    ul.info-list#tv
+      each obj in tv
+        li.info-item
+          .pic
+            img(src= obj.src, alt= obj.alt)
+          .content
+            h4.title-item= obj.title
+            p= obj.content
+    //- end infobar tv
+  //- end info section
+
+  //- begin interesting section
+  section.int
+    h3.title-int.title-aside Понравилось посетителям
+
+    ul.int-list
+      - for (let i=0; i<=3; i++)
+          li.int-item
+            .pic
+              img(src="img/content/interesting/film-promo.png", alt="film promo")
+            .content
+              p.
+                Lorem Ipsum is simply dummy text of the 
+                printing and typesetting. 
+
+              a(href="#").int-more Medication »
+  //- end interesting section

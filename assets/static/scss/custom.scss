@@ -1,0 +1,240 @@
+@import 'base/_typography.scss';
+@import 'base/_reset.scss';
+
+@import 'helpers/variables/_variables.scss';
+@import 'helpers/mixin/_mixin.scss';
+
+@import 'modules/_header.scss';
+@import 'modules/_nav.scss';
+@import 'modules/_gallery.scss';
+@import 'modules/_aside.scss';
+@import 'modules/_footer.scss';
+
+//TODO: Переписать в сокращенном виде свойство font в правиле для body
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    font-family: $baseFont;
+    color: $fontColor; 
+
+    background-color: $whiteGrey;
+}
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-weight: bold;
+    }
+}
+
+.container { 
+    position: relative;
+    z-index: $z-index1;
+
+    max-width: 1048px;
+    min-height: inherit;
+    margin: 0 auto;
+    padding: 0 16px 0 32px;
+
+    background-color: $white;
+
+    @include media-tablet-devices() {
+        padding: 0 14px;
+    }
+}
+
+.banner {
+    flex: 2;
+
+    a { 
+        display: inline-block;
+        padding: 19px 4px 3px 0;
+
+        font-size: 42px;
+        line-height: 1;
+        letter-spacing: 2px;
+        color: $white;
+
+        background: url('img/general/banner/banner-bg.png') no-repeat center  / cover;
+
+        @include media-large-phones() {
+            padding: 5% 0 0 0;
+
+            font-size: 28px;
+            letter-spacing: initial;
+        }
+    }
+}
+
+.search-form {
+    display: flex;
+
+    @include media-tablet-devices() {
+        display: none;
+    }
+
+    [type="search"] {
+        width: 318px;
+
+        border: 1px solid rgba($grey,.3);
+        border-right: none;
+    }
+}
+
+.search-form-submit {
+    padding: 8px 27px 8px 27px;
+
+    font-weight: bold;
+    font-size: 19px;
+    text-transform: uppercase;
+    color: $white;
+
+    background-color: $cyan;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+
+    margin: 0 0 -2px 14.6%;
+
+    @include media-laptop-devices {
+        margin-left: 3%;
+    }
+
+    @include media-tablet-devices() {
+        margin: 0 0 -2px 0;
+    }
+
+    @include media-middle-phones() {
+        margin-bottom: -1px;
+    }
+
+    li { 
+        width: 38px;
+        height: 38px;
+
+        @include media-middle-phones() {
+            width: 32px;
+            height: 32px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 6px;
+        }
+    }
+
+    a {
+        display: block;
+    }
+}
+
+#hamburger {
+    display: none;
+    margin-left: 5%;
+
+    @include media(750px, 852px) {
+        display: inline-block;
+    }
+
+    span,
+    &::before,
+    &::after {
+        content: '';
+
+        display: block;
+        width: 42px;
+        height: 7px;
+
+        background-color: $black;
+
+        @include media-middle-phones() {
+            width: 32px;
+            height: 5px;
+        }
+    }
+
+    span,
+    &::before {
+        margin-bottom: 5px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+
+    padding: 21px 0;
+
+    @include media-large-phones() {
+        flex-wrap: wrap;
+    }
+}
+
+#content {
+    flex-basis: 670px;
+    padding-right: 24px;
+
+    @include media-large-phones() {
+        flex-basis: 100%;
+        margin-bottom: 24px;
+        padding-right: 0;
+    }
+}
+
+.title-content {
+    margin-bottom: 4px;
+
+    font-size: 35px;
+    line-height: 1.3714em;
+    color: $black;
+
+    @include media-tablet-devices() {
+        font-size: 28px;
+    }
+
+    @include media-middle-phones() {
+        margin-bottom: 5%;
+        font-size: 24px;
+    }
+}
+
+.date {
+    position: absolute;
+    top: 15.7%;
+    left: -46px;
+    z-index: $z-index3;
+
+    width: 68px;
+    height: 73px;
+    
+    text-align: center;
+
+    color: $white;
+
+    @include media-tablet-devices {
+        display: none;
+    }
+
+    .num {
+        padding: 15px 0 11px;
+
+        font-weight: bold;
+        font-size: 35px;
+
+        background-color: $orange;
+    }
+    
+    .month {
+        padding: 3px 0 5px 0;
+
+        font-size: 19px;
+        text-transform: uppercase;
+
+        background-color: $cyan;
+    }
+}

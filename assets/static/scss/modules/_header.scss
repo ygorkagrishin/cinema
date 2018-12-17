@@ -1,0 +1,12 @@
+#header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    padding: 28px 0 22px;
+
+    @include media-small-phones() {
+        padding: 5% 0 3%;
+    }
+
+}

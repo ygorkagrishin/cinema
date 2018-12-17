@@ -1,0 +1,25 @@
+
+include ../helpers/variables/_variables
+include ../helpers/mixin/_mixin
+
+doctype
+
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(content="IE=edge" http-equiv="X-UA-Compatible")
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+
+    block title
+
+    link(rel="stylesheet", href="libs/normalize/normalize.css")
+    link(rel="stylesheet", href="custom.min.css")
+
+    block styles
+
+  body.page
+    block content
+
+    script(src="libs/jquery/jquery.min.js")
+    script(src="common.min.js")
+    

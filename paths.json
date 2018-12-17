@@ -1,0 +1,43 @@
+{
+  "paths": {
+    "html": {
+      "src": "assets/pug",
+      "dest": "public/"
+    },
+    "css": {
+      "src": "assets/static/scss",
+      "dest": "public/"
+    },
+    "js": {
+      "src": "assets/static/js",
+      "dest": "public/"
+    },
+    "fonts": {
+      "src": "assets/static/fonts",
+      "dest": "public/fonts/"
+    },
+    "img": {
+      "src": "assets/static/img",
+      "dest": "public/img/"
+    },
+    "svg": {
+      "src": "assets/static/svg",
+      "dest": "public/"
+    },
+    "libs": {
+      "css": [
+        {   
+          "src": "node_modules/normalize.css/normalize.css",
+          "dest": "public/libs/normalize/"
+        }
+      ],
+      "js": [
+        {
+          "src": "node_modules/jquery/dist/jquery.min.js",
+          "dest": "public/libs/jquery/"
+        }
+      ]
+    },
+    "baseDir": "public"
+  }
+}

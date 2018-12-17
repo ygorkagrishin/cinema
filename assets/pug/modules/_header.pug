@@ -1,0 +1,16 @@
+header#header
+  h1.banner.banner-header
+    a(href="#") Эксперт
+
+  form.search-form.search-header
+    input(type="search")
+    input(type="submit", value="Поиск").search-form-submit
+
+  ul.social.social-header
+    each obj in social 
+      li
+        a(href= obj.href)
+          img(src= obj.src, alt= obj.alt)
+
+  button(type='button')#hamburger
+    span

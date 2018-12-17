@@ -1,0 +1,52 @@
+extends templates/temp
+
+block title 
+  title Главная
+
+block content
+  .container
+    //- begin header
+    include modules/_header
+    //- end header
+
+    //- begin header
+    include modules/_nav
+    //- end header
+        
+    .wrapper
+      //- begin main content
+      main#content
+        h2.title-content.title Lorem Ipsum is simply dummy text of the printing
+
+        p.
+          Lorem Ipsum is simply dummy text of the printing and typesetting 
+          industry. Lorem Ipsum has been the industry's standard dummy 
+          text ever since the 1500s, when an unknown printer took a 
+          galley of type and scrambled it to make a type specimen book. 
+          It has survived not only five centuries, but also the leap into 
+          electronic typesetting, remaining essentially unchanged. It was 
+          popularised in the 1960s with the release of 
+          Letraset sheets containing
+        //- begin gallery
+        include modules/_gallery
+        //- end gallery
+
+        p.
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+          when an unknown printer took a galley of type and scrambled it to make a type 
+          specimen book. It has survived not only five centuries, 
+          but also the leap into electronic typesetting, remaining essentially unchanged. 
+          It was popularised in the 1960s with the release of Letraset sheets containing 
+          Lorem Ipsum passages, and more recently with desktop publishing software 
+          like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply 
+          dummy text of the printing and typesetting industry. 
+      //- end main content    
+    
+      //- begin aside content
+      include modules/_aside  
+      //- end aside content 
+
+    time.date
+      p.num 28
+      p.month Фев

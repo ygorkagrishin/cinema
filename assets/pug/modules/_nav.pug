@@ -1,0 +1,5 @@
+nav#main-navigator
+  ul
+    each obj in nav_list
+      li(style=`background-color: ${obj.bgColor}`)
+        a(href= obj.href)= obj.name
